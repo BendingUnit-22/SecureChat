@@ -1,0 +1,31 @@
+
+
+.text-area .content {
+   -fx-background-color: black ;
+}
+
+.text-area {
+      -fx-text-fill: #00ff00;
+}
+
+
+#status{
+   -fx-text-fill: red;
+}
+
+#btnConnected{
+   -fx-text-fill: #004d00;
+}
+
+
+#greeting {
+    -fx-font-size: 18pt;
+    -fx-text-alignment: center;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: black;
+    -fx-alignment: center;
+    -fx-border-style: solid, segments(1, 1);
+    -fx-border-insets: 5 5 5 5, 0;
+
+
+}
