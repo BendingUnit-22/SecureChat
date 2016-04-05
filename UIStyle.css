@@ -1,0 +1,57 @@
+
+
+.text-area .content {
+   -fx-background-color: black ;
+}
+
+.text-area {
+      -fx-text-fill: #00ff00;
+}
+
+
+#status{
+   -fx-text-fill: red;
+}
+
+#btnConnected{
+   -fx-text-fill: #004d00;
+}
+
+
+#greeting {
+    -fx-font-size: 18pt;
+    -fx-text-alignment: center;
+    -fx-font-family: "Segoe UI Semibold";
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-border-insets: 5 5 5 5, 0;
+    -fx-padding: 10;
+    -fx-background-color: #1A1A1A;
+
+
+}
+
+#contentBox{
+-fx-background-radius: 25%;
+-fx-border-radius: 25%;
+-fx-border-width:5;
+-fx-background-color: #336699;
+-fx-text-fill: white;
+
+}
+
+.list-cell:filled .label {
+    -fx-text-fill: white;
+
+}
+
+.list-cell:filled .image {
+  -fx-background-radius: 25%;
+  -fx-border-radius: 25%;
+
+}
+
+
+#name{
+   -fx-text-fill: #004d00;
+}
