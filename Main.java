@@ -23,6 +23,8 @@ import java.io.File;
 import java.io.Serializable;
 import java.util.Random;
 
+/** Rixing Wu (Extra credit)
+*/
 
 public class Main extends Application implements ConnectCallback{
 
@@ -159,7 +161,7 @@ public class Main extends Application implements ConnectCallback{
         secConnect.setCallback(this);
         secConnect.start();
 
-        INFO greeting  = new INFO(sender, "Greeting!", false);
+        INFO greeting  = new INFO(sender, "Greetings!", false);
         secConnect.sendMessage(greeting);
     }
 
@@ -169,30 +171,26 @@ public class Main extends Application implements ConnectCallback{
           hasStartedChat = true;
           String takingWith = info.getSender();
           items.add(info);
-         startChat(takingWith);
+          startChat(takingWith);
       }else{
          items.add(info);
       }
 
     }
-
-
-    /**
-     *  Chat Scene
+    /**  New Scene (Chat room )
+     *
      */
 
     ListView<INFO> list;
-  ObservableList<INFO> items = FXCollections.observableArrayList ();
+    ObservableList<INFO> items = FXCollections.observableArrayList();
     Scene chatroom;
     static String icon1;
     static String icon2;
-
 
     public void startChat(String name){
         Platform.runLater(new Runnable() {
             @Override
             public void run() {
-
                 Random generator = new Random();
                 int p1 = generator.nextInt(7) + 1;
                 int p2 = generator.nextInt(7) + 1;
@@ -238,7 +236,7 @@ public class Main extends Application implements ConnectCallback{
 
                     INFO info = new INFO("Me",message.getText(), true);
                     items.add(info);
-                    INFO out = new INFO(name,message.getText(), false);
+                    INFO out = new INFO(username.getText() ,message.getText(), false);
                     secConnect.sendMessage(out);
 
                     message.clear();
@@ -254,7 +252,7 @@ public class Main extends Application implements ConnectCallback{
                         IMAGE_OBJ img = new IMAGE_OBJ(file);
                         INFO info = new INFO("Me",img, true);
                         items.add(info);
-                        INFO out = new INFO(name,img, false);
+                        INFO out = new INFO(username.getText(),img, false);
                         secConnect.sendMessage(out);
 
                     }

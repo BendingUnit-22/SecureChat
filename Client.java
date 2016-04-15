@@ -13,7 +13,7 @@ class Client {
     ObjectOutputStream oos = null;
     ObjectInputStream ois = null;
 
-    public Client(String ipAddress, int port,ConnectCallback connectionEstb) throws Exception{
+    public Client(String ipAddress, int port, ConnectCallback connectionEstb) throws Exception{
           s = new Socket(ipAddress, port);
          System.out.println("Local Port: " + s.getLocalPort());
          System.out.println("Server Port: " + s.getPort());
@@ -44,14 +44,12 @@ class Client {
           String keyHash = DiffieHellman.createHashString(mkey);
           System.out.println("Client: Symmetric Key Created. \n");
 
-          System.out.println("-------------------- Secure RSA Communication Initialized ----------------------------");
+          System.out.println("-------------------- Secure AES Communication Initialized ----------------------------");
           System.out.println(keyHash );
 
         secCon = new SecureConnection(ois, oos, keyHash);
         connectionEstb.ConnectionCallback(secCon);
 
  }
-
-
 
 }

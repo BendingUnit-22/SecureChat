@@ -28,9 +28,9 @@ public class INFO implements Serializable {
 		return local;
 	}
 
+
 	@Override
 	public String toString() {
 		return "me" + " <-- " + sender  + " :: [ " + data + " ]";
 	}
 }
-
