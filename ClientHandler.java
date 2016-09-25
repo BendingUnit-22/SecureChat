@@ -51,7 +51,7 @@ public class ClientHandler extends Thread {
 			String keyHash = DiffieHellman.createHashString(mkey);
 			System.out.println("Server: Symmetric Key Created.  \n");
 
-			System.out.println("-------------------- Secure RSA Communication Initialized ----------------------------");
+			System.out.println("-------------------- Secure AES Communication Initialized ----------------------------");
 			System.out.println(keyHash );
 
 
